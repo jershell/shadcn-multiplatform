@@ -1,0 +1,56 @@
+<resources>
+    <string name="attachment_open">Open %1$s</string>
+    <string name="attachment_remove">Remove %1$s</string>
+    <string name="attachment_status_uploaded">Uploaded</string>
+    <string name="attachment_status_uploading">Uploading</string>
+    <string name="attachment_status_upload_failed">Upload failed</string>
+
+    <string name="breadcrumb_root">Breadcrumb</string>
+    <string name="breadcrumb_list">Breadcrumb list</string>
+    <string name="breadcrumb_more">More</string>
+
+    <string name="calendar_previous_month">Previous month</string>
+    <string name="calendar_next_month">Next month</string>
+
+    <string name="combobox_placeholder">Select an option</string>
+    <string name="combobox_empty">No results found.</string>
+
+    <string name="carousel_previous_slide">Previous slide</string>
+    <string name="carousel_next_slide">Next slide</string>
+
+    <string name="command_placeholder">Type a command or search...</string>
+    <string name="command_empty">No results found.</string>
+
+    <string name="date_picker_placeholder">Pick a date</string>
+
+    <string name="dialog_close">Close</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <string name="drawer_close">Close</string>
+
+    <string name="inline_code_copy">Copy</string>
+
+    <string name="pagination_previous_page">Previous page</string>
+    <string name="pagination_previous">Previous</string>
+    <string name="pagination_next">Next</string>
+    <string name="pagination_next_page">Next page</string>
+    <string name="pagination_more_pages">More pages</string>
+
+    <string name="questionnaire_step">Step</string>
+    <string name="questionnaire_of">of</string>
+    <string name="questionnaire_back">Back</string>
+    <string name="questionnaire_skip">Skip</string>
+    <string name="questionnaire_next">Next</string>
+    <string name="questionnaire_finish">Finish</string>
+    <string name="questionnaire_completed">Thank you!</string>
+    <string name="questionnaire_completed_description">Your responses have been recorded.</string>
+
+    <string name="select_placeholder">Select an option</string>
+
+    <string name="separator_description">Separator</string>
+
+    <string name="spinner_loading">Loading</string>
+
+    <string name="toast_dismiss_notification">Dismiss notification</string>
+</resources>

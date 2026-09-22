@@ -1,0 +1,123 @@
+[versions]
+libversion = "1.0.0-dev"
+
+
+charts = "2.4.0"
+iconsTabler = "2.2.1"
+kflate = "1.0.0"
+composeUriPainter = "1.1.0"
+koinCompose = "4.2.2"
+kotlin = "2.4.0"
+vanniktechMavenPublish = "0.37.0"
+compose-multiplatform = "1.11.1"
+kotlinxIo = "0.9.0"
+compose-multiplatform-navigation3-browser = "0.2.0"
+lazytable = "1.10.0"
+slf4jSimple = "2.0.18"
+unstyled = "2.9.0"
+agp = "9.1.0"
+androidx-activityCompose = "1.12.0"
+kotlinx-coroutines = "1.11.0"
+ktor = "3.5.2"
+androidx-lifecycle = "2.11.0"
+androidx-nav3 = "1.1.1"
+nav3-browser = "1.1.0"
+kotlinx-serialization = "1.11.0"
+coil = "3.5.0"
+kotlinx-datetime = "0.8.0"
+buildConfig = "5.6.5"
+iconsLucide = "2.2.1"
+ripple = "1.1.0"
+window = "1.4.0"
+semver="2.0.0"
+
+[libraries]
+charts = { module = "io.github.dautovicharis:charts", version.ref = "charts" }
+kflate = { module = "com.rafambn:KFlate", version.ref = "kflate" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCompose" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinCompose" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinxIo" }
+semver = { module = "net.swiftzer.semver:semver", version.ref = "semver" }
+
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-multiplatform" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
+compose-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-multiplatform" }
+compose-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose-multiplatform" }
+compose-ui-tooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "compose-multiplatform" }
+compose-ui-test = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "compose-multiplatform" }
+androidx-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+lazytable = { module = "io.github.oleksandrbalan:lazytable", version.ref = "lazytable" }
+
+composables-ripple = { module = "com.composables:ripple-indication", version.ref = "ripple" }
+composables-uri-painter = { module = "com.composables:compose-uri-painter", version.ref = "composeUriPainter" }
+icons-lucide-cmp = { module = "com.composables:icons-lucide-cmp", version.ref = "iconsLucide" }
+icons-tabler-filled-cmp = { module = "com.composables:icons-tabler-filled-cmp", version.ref = "iconsTabler" }
+icons-tabler-outline-cmp = { module = "com.composables:icons-tabler-outline-cmp", version.ref = "iconsTabler" }
+
+composeunstyled-anchored = { module = "com.composables:composeunstyled-internal-anchored", version.ref = "unstyled" }
+composeunstyled-bottom-sheet = { module = "com.composables:composeunstyled-bottom-sheet", version.ref = "unstyled" }
+composeunstyled-build-modifier = { module = "com.composables:composeunstyled-build-modifier", version.ref = "unstyled" }
+composeunstyled-breakpoints = { module = "com.composables:composeunstyled-breakpoints", version.ref = "unstyled" }
+composeunstyled-button = { module = "com.composables:composeunstyled-button", version.ref = "unstyled" }
+composeunstyled-checkbox = { module = "com.composables:composeunstyled-checkbox", version.ref = "unstyled" }
+composeunstyled-colored-indication = { module = "com.composables:composeunstyled-colored-indication", version.ref = "unstyled" }
+composeunstyled-dialog = { module = "com.composables:composeunstyled-dialog", version.ref = "unstyled" }
+composeunstyled-disclosure = { module = "com.composables:composeunstyled-disclosure", version.ref = "unstyled" }
+composeunstyled-dropdown-menu = { module = "com.composables:composeunstyled-dropdown-menu", version.ref = "unstyled" }
+composeunstyled-escape-handler = { module = "com.composables:composeunstyled-escape-handler", version.ref = "unstyled" }
+composeunstyled-focus-ring = { module = "com.composables:composeunstyled-focus-ring", version.ref = "unstyled" }
+composeunstyled-icon = { module = "com.composables:composeunstyled-icon", version.ref = "unstyled" }
+composeunstyled-modal = { module = "com.composables:composeunstyled-modal", version.ref = "unstyled" }
+composeunstyled-modal-bottom-sheet = { module = "com.composables:composeunstyled-modal-bottom-sheet", version.ref = "unstyled" }
+composeunstyled-outline = { module = "com.composables:composeunstyled-outline", version.ref = "unstyled" }
+composeunstyled-platformtheme = { module = "com.composables:composeunstyled-platformtheme", version.ref = "unstyled" }
+composeunstyled-portal = { module = "com.composables:composeunstyled-portal", version.ref = "unstyled" }
+composeunstyled-progress = { module = "com.composables:composeunstyled-progress", version.ref = "unstyled" }
+composeunstyled-radio-group = { module = "com.composables:composeunstyled-radio-group", version.ref = "unstyled" }
+composeunstyled-scrollbars = { module = "com.composables:composeunstyled-scrollbars", version.ref = "unstyled" }
+composeunstyled-separators = { module = "com.composables:composeunstyled-separators", version.ref = "unstyled" }
+composeunstyled-slider = { module = "com.composables:composeunstyled-slider", version.ref = "unstyled" }
+composeunstyled-stack = { module = "com.composables:composeunstyled-stack", version.ref = "unstyled" }
+composeunstyled-tab-group = { module = "com.composables:composeunstyled-tab-group", version.ref = "unstyled" }
+composeunstyled-text-field = { module = "com.composables:composeunstyled-text-field", version.ref = "unstyled" }
+composeunstyled-theming = { module = "com.composables:composeunstyled-theming", version.ref = "unstyled" }
+composeunstyled-toggle-switch = { module = "com.composables:composeunstyled-toggle-switch", version.ref = "unstyled" }
+composeunstyled-tooltip = { module = "com.composables:composeunstyled-tooltip", version.ref = "unstyled" }
+composeunstyled-tri-state-checkbox = { module = "com.composables:composeunstyled-tri-state-checkbox", version.ref = "unstyled" }
+composeunstyled-window-container-size = { module = "com.composables:composeunstyled-window-container-size", version.ref = "unstyled" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
+androidx-lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-navigation3 = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "androidx-lifecycle" }
+compose-nav3 = { module = "org.jetbrains.androidx.navigation3:navigation3-ui", version.ref = "androidx-nav3" }
+nav3-browser = { module = "com.github.terrakok:navigation3-browser", version.ref = "nav3-browser" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+coil = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4jSimple" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktechMavenPublish" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-kmp-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }

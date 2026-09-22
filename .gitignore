@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+
+# IDE
+*.iml
+/.idea
+/local.properties
+
+# Kotlin
+.kotlin/
+/kotlin-js-store/yarn.lock
+
+# OS / misc
+.DS_Store
+*.hprof
+.externalNativeBuild
+*.cxx
+/node_modules/
+/tmp/
+.demoapp_session.json
+
+# Internal work notes
+/WIP.md
+
+# Design references: regenerated from pinned upstream commits (syncShadcnReference).
+# Only the Figma token export (design-tokens.json) is versioned.
+/imports/shadcn-reference/
+/imports/api-reference/

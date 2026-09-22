@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="56"
+   height="64"
+   viewBox="0 0 56 64"
+   fill="none"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="shadcn-multiplatform-logo.svg"
+   inkscape:version="1.4.4 (1:1.4.4+202605061436+dcaf3e7d9e)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     showgrid="true"
+     inkscape:zoom="11.313709"
+     inkscape:cx="31.201087"
+     inkscape:cy="32.394329"
+     inkscape:window-width="1870"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8">
+    <sodipodi:guide
+       position="28.054483,30.342466"
+       orientation="1,0"
+       id="guide8"
+       inkscape:locked="false" />
+    <inkscape:grid
+       id="grid8"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <g
+     clip-path="url(#clip0_657_7666)"
+     id="g5">
+    <path
+       d="M 55.1617,16 V 48 L 28.0017,64 0.841797,48 V 16 L 28.0017,0 Z"
+       fill="#6075F2"
+       id="path1"
+       style="display:inline;fill:#c09af5;fill-opacity:1" />
+    <path
+       d="M 38.64,25.7143 V 38.2856 L 28,44.5715 V 64 L 55.16,48 V 16 Z"
+       fill="#6B57FF"
+       id="path2"
+       style="display:none;fill:#ff8080" />
+    <path
+       d="M28.0017 44.5715L17.3618 38.2856V25.7143L0.841797 16V48L28.0017 64V44.5715Z"
+       fill="url(#paint0_radial_657_7666)"
+       id="path3"
+       style="fill:#535d6c;fill-opacity:1" />
+    <path
+       d="m 17.3618,25.7143 10.6399,-6.2857 0.0334,0.09852 L 28.026477,0.09009746 28.0017,0 0.841797,16 Z"
+       fill="url(#paint1_linear_657_7666)"
+       id="path4"
+       style="fill:#373748;fill-opacity:1"
+       sodipodi:nodetypes="ccccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 1">
+    <ellipse
+       style="fill:#373748;fill-opacity:1;stroke:#000000;stroke-width:0.780523;stroke-linecap:round;stroke-linejoin:round"
+       id="path18"
+       cx="65.342606"
+       cy="-10.309485"
+       rx="0.034494571"
+       ry="14.177269"
+       transform="rotate(59.621326)" />
+  </g>
+  <defs
+     id="defs8">
+    <radialGradient
+       id="paint0_radial_657_7666"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(18.0681 16.5042) scale(47.1872 48.1507)">
+      <stop
+         stop-color="#5383EC"
+         id="stop5" />
+      <stop
+         offset="0.86699"
+         stop-color="#7F52FF"
+         id="stop6" />
+    </radialGradient>
+    <linearGradient
+       id="paint1_linear_657_7666"
+       x1="41.6342"
+       y1="0.430441"
+       x2="11.6244"
+       y2="33.7243"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#33C3FF"
+         id="stop7" />
+      <stop
+         offset="0.87843"
+         stop-color="#5383EC"
+         id="stop8" />
+    </linearGradient>
+    <clipPath
+       id="clip0_657_7666">
+      <rect
+         width="56"
+         height="64"
+         fill="white"
+         id="rect8" />
+    </clipPath>
+  </defs>
+  <ellipse
+     style="fill:#373748;fill-opacity:1;stroke:#000000;stroke-width:0.847803;stroke-linecap:round;stroke-linejoin:round"
+     id="path19"
+     cx="61.214294"
+     cy="-10.888098"
+     rx="0.037467957"
+     ry="8.0930786"
+     transform="rotate(59.836013)" />
+</svg>
