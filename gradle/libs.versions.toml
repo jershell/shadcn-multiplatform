@@ -1,5 +1,5 @@
 [versions]
-libversion = "1.0.1-dev"
+libversion = "1.0.2-dev"
 
 
 charts = "2.4.0"

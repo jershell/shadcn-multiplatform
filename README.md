@@ -27,7 +27,7 @@ Add the dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.jershell:shadcn-multiplatform:1.0.1-dev")
+    implementation("com.github.jershell:shadcn-multiplatform:1.0.2-dev")
 }
 ```
 
