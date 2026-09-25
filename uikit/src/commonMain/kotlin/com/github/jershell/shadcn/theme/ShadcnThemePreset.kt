@@ -278,7 +278,7 @@ public fun ShadcnTheme(
                 defaultTextStyle = TextStyle(fontFamily = LocalShadcnFonts.current ?: FontFamily.Default)
                 defaultTextSelectionColors = TextSelectionColors(
                     backgroundColor = palette.getValue(ColorTokens.primary),
-                    handleColor = palette.getValue(ColorTokens.primaryForeground),
+                    handleColor = palette.getValue(ColorTokens.primaryForeground).copy(alpha = 0.3f),
                 )
                 properties[ColorProps] = palette
                 properties[DimProps] = mergedDimensions(preset, dark)

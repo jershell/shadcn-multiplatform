@@ -27,22 +27,23 @@ Add the dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.jershell:shadcn-multiplatform:1.0.0-dev")
+    implementation("com.github.jershell:shadcn-multiplatform:1.0.1-dev")
 }
 ```
 
-Wrap your UI in `ShadcnTheme`:
+Wrap your UI in `ShadcnUI`:
 
 ```kotlin
-import com.github.jershell.shadcn.theme.ShadcnTheme
+import com.github.jershell.shadcn.containers.ShadcnUI
 
 @Composable
 fun App() {
-    ShadcnTheme {
+    ShadcnUI {
         // your UI, components from com.github.jershell.shadcn.components.*
     }
 }
 ```
+or ShadcnTheme {}
 
 ## Demo
 

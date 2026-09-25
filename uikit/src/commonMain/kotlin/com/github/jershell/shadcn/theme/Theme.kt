@@ -22,10 +22,10 @@ enum class ThemePreset {
     Default,
 }
 
-internal val LocalThemeIsDark: ProvidableCompositionLocal<MutableState<Boolean>> =
+val LocalThemeIsDark: ProvidableCompositionLocal<MutableState<Boolean>> =
     compositionLocalOf { mutableStateOf(false) }
 
-internal val LocalThemePreset: ProvidableCompositionLocal<ThemePreset> =
+val LocalThemePreset: ProvidableCompositionLocal<ThemePreset> =
     compositionLocalOf { ThemePreset.Default }
 
 private val ShadcnTheme = buildTheme {
