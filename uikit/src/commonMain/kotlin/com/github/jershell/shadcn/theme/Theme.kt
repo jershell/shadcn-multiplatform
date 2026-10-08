@@ -22,10 +22,10 @@ enum class ThemePreset {
     Default,
 }
 
-val LocalThemeIsDark: ProvidableCompositionLocal<MutableState<Boolean>> =
+internal val LocalThemeIsDark: ProvidableCompositionLocal<MutableState<Boolean>> =
     compositionLocalOf { mutableStateOf(false) }
 
-val LocalThemePreset: ProvidableCompositionLocal<ThemePreset> =
+internal val LocalThemePreset: ProvidableCompositionLocal<ThemePreset> =
     compositionLocalOf { ThemePreset.Default }
 
 private val ShadcnTheme = buildTheme {
@@ -36,9 +36,10 @@ private val ShadcnTheme = buildTheme {
     defaultContentColor = palette.getValue(ColorTokens.foreground)
     // theme font: implicit Text (without an explicit style) inherits LocalTextStyle
     defaultTextStyle = TextStyle(fontFamily = LocalShadcnFonts.current ?: FontFamily.Default)
-    // selection:bg-primary selection:text-primary-foreground
+    // selection: translucent primary (Compose cannot tint the selected text itself,
+    // so a solid primary would hide the text in both themes)
     defaultTextSelectionColors = TextSelectionColors(
-        backgroundColor = palette.getValue(ColorTokens.primary),
+        backgroundColor = palette.getValue(ColorTokens.primary).copy(alpha = 0.3f),
         handleColor = palette.getValue(ColorTokens.primaryForeground),
     )
     properties[ColorProps] = palette

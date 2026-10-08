@@ -84,6 +84,7 @@ import com.github.jershell.shadcn.components.select.Select
 import com.github.jershell.shadcn.components.switch.Switch
 import com.github.jershell.shadcn.components.table.DataTableColumn
 import com.github.jershell.shadcn.components.table.Table
+import com.github.jershell.shadcn.components.table.TableConfig
 import com.github.jershell.shadcn.components.tabs.Tabs
 import com.github.jershell.shadcn.components.textarea.Textarea
 import com.github.jershell.shadcn.components.typography.H4
@@ -925,10 +926,11 @@ private fun RecentSalesTable() {
             modifier = Modifier.fillMaxWidth(),
             rows = pageItems,
             columns = columns,
-            pinnedHeader = true,
-            rowHeight = 52.dp,
-            headerHeight = 40.dp,
-            cellPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+            config = TableConfig(
+                rowHeight = 52.dp,
+                headerHeight = 40.dp,
+                cellPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+            ),
             rowBackground = { row, _ ->
                 when {
                     row.id in selectedIds -> Theme[ColorProps][ColorTokens.muted]
@@ -946,7 +948,7 @@ private fun RecentSalesTable() {
                                 selectedIds - pageIds.toSet()
                             }
                         },
-                        label = stringResource(Res.string.dashboard_select_all_rows_on_this_page),
+                        accessibilityLabel = stringResource(Res.string.dashboard_select_all_rows_on_this_page),
                     )
 
                     "actions" -> Unit
@@ -991,7 +993,7 @@ private fun RecentSalesTable() {
                         onCheckedChange = { checked ->
                             selectedIds = if (checked) selectedIds + row.id else selectedIds - row.id
                         },
-                        label = stringResource(Res.string.dashboard_select_x, row.name),
+                        accessibilityLabel = stringResource(Res.string.dashboard_select_x, row.name),
                     )
 
                     "name" -> Column {

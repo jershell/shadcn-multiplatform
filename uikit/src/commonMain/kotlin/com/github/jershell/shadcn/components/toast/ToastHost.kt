@@ -9,6 +9,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,6 +21,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
@@ -101,8 +103,8 @@ fun ToastHost(
 ) {
     val entries = manager.entries
     val isTop = config.position == ToastPosition.TopStart ||
-        config.position == ToastPosition.TopCenter ||
-        config.position == ToastPosition.TopEnd
+            config.position == ToastPosition.TopCenter ||
+            config.position == ToastPosition.TopEnd
     val alignment = when (config.position) {
         ToastPosition.TopStart -> Alignment.TopStart
         ToastPosition.TopCenter -> Alignment.TopCenter
@@ -361,9 +363,9 @@ private fun ToastItem(
                 }
                 alpha = enterProgress * (1f - exitProgress)
                 translationY = slideSign * (
-                    (1f - enterProgress) * enterSlidePx +
-                        exitProgress * ownHeightPx
-                    )
+                        (1f - enterProgress) * enterSlidePx +
+                                exitProgress * ownHeightPx
+                        )
             }
             .then(
                 if (stacked) {
@@ -414,21 +416,26 @@ private fun ToastItem(
                             tint = colors.icon,
                         )
                     }
-                    Column(
-                        modifier = Modifier.weight(1f),
-                        verticalArrangement = Arrangement.spacedBy(TwDimensions.gapGapToken1), // gap-1
-                    ) {
-                        BasicText(
-                            text = entry.title,
-                            style = TypographyStyles.textSmMedium.copy(color = colors.title),
-                        )
-                        entry.description?.let { description ->
-                            BasicText(
-                                text = description,
-                                style = TypographyStyles.textSmRegular.copy(color = colors.description),
+                    if (entry.selectable) {
+                        SelectionContainer {
+                            Column(
+                                modifier = Modifier.weight(1f),
+                                verticalArrangement = Arrangement.spacedBy(TwDimensions.gapGapToken1), // gap-1
+                                content = {
+                                    ToastItemBody(entry, colors)
+                                }
                             )
                         }
+                    } else {
+                        Column(
+                            modifier = Modifier.weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(TwDimensions.gapGapToken1), // gap-1
+                            content = {
+                                ToastItemBody(entry, colors)
+                            }
+                        )
                     }
+
                     entry.action?.let { action ->
                         Button(
                             onClick = {
@@ -460,5 +467,19 @@ private fun ToastItem(
 
     DisposableEffect(entry.id) {
         onDispose { heights.remove(entry.id) }
+    }
+}
+
+@Composable
+private fun ColumnScope.ToastItemBody(entry: ToastEntry, colors: ToastColors) {
+    BasicText(
+        text = entry.title,
+        style = TypographyStyles.textSmMedium.copy(color = colors.title),
+    )
+    entry.description?.let { description ->
+        BasicText(
+            text = description,
+            style = TypographyStyles.textSmRegular.copy(color = colors.description),
+        )
     }
 }

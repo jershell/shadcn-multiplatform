@@ -14,12 +14,16 @@ import com.composables.icons.lucide.ChevronLeft
 import com.composables.icons.lucide.ChevronRight
 import com.composables.icons.lucide.Ellipsis
 import com.composables.icons.lucide.Lucide
+import com.composeunstyled.UnstyledIcon
+import com.composeunstyled.theme.Theme
 import com.github.jershell.shadcn.components.button.Button
 import com.github.jershell.shadcn.components.button.ButtonIcon
 import com.github.jershell.shadcn.components.button.ButtonSize
 import com.github.jershell.shadcn.components.button.ButtonText
 import com.github.jershell.shadcn.components.button.ButtonVariant
 import com.github.jershell.shadcn.generated.resources.Res
+import com.github.jershell.shadcn.theme.ColorProps
+import com.github.jershell.shadcn.theme.ColorTokens
 import com.github.jershell.shadcn.theme.TwDimensions
 import com.github.jershell.shadcn.generated.resources.pagination_more_pages
 import com.github.jershell.shadcn.generated.resources.pagination_next
@@ -151,9 +155,12 @@ fun PaginationEllipsis(
         modifier = modifier.size(TwDimensions.heightHToken9),
         contentAlignment = Alignment.Center,
     ) {
-        ButtonIcon(
+        // Outside a Button there is no LocalButtonContentColor — resolve the same
+        // foreground token that ghost buttons use, otherwise the icon is black.
+        UnstyledIcon(
             imageVector = Lucide.Ellipsis,
             contentDescription = stringResource(Res.string.pagination_more_pages),
+            tint = Theme[ColorProps][ColorTokens.foreground],
         )
     }
 }

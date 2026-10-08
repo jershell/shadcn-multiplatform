@@ -35,7 +35,7 @@ kotlin {
         compilerOptions { jvmTarget = JvmTarget.JVM_17 }
     }
 
-    // io.github.oleksandrbalan:lazytable has not for js
+    // com.ryinex.kotlin:compose-data-table has no plain js target (wasm only)
     // js { browser() }
     wasmJs { browser() }
 
@@ -105,7 +105,9 @@ kotlin {
             api(libs.composables.uri.painter)
             api(libs.icons.lucide.cmp)
 
-            implementation(libs.lazytable)
+            // table engine (exposed as api so its own types stay usable)
+            api(libs.compose.data.table)
+            api(libs.compose.data.table)
         }
 
         commonTest.dependencies {

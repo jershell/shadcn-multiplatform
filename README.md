@@ -21,13 +21,28 @@ shadcn/ui components for Compose Multiplatform, built on top of [compose-unstyle
 - `:demoApp:commonApp` — shared demo code (+ platform sources with expect/actual)
 - `:demoApp:androidApp`, `:demoApp:desktopApp`, `:demoApp:webApp` — demo entry points; iOS is opened from `demoApp/iosApp` in Xcode
 
+## Compatibility
+
+The library is built against a fixed toolchain. It depends on APIs introduced in these versions,
+so it must not be consumed with older ones:
+
+| Tool                       | Version |
+|----------------------------|---------|
+| Kotlin                     | 2.4.0   |
+| Compose Multiplatform      | 1.11.1  |
+| Android Gradle Plugin      | 9.1.0   |
+| JVM target                 | 17      |
+
+Versions are managed exclusively through `gradle/libs.versions.toml`. Do not expect the library to
+compile or resolve against earlier toolchains.
+
 ## Getting started
 
 Add the dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.jershell:shadcn-multiplatform:1.0.2-dev")
+    implementation("com.github.jershell:shadcn-multiplatform:1.0.3-dev")
 }
 ```
 

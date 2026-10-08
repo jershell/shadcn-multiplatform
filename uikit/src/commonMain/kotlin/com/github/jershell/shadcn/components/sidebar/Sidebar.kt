@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.composeunstyled.FocusVisibilityProvider
 import com.composeunstyled.UnstyledHorizontalSeparator
-import com.composeunstyled.rememberScrollbarState
+import com.github.jershell.shadcn.components.scroll.rememberCoalescedScrollbarState
 import com.composeunstyled.theme.Theme
 import com.github.jershell.shadcn.components.scroll.VerticalScrollbar
 import com.github.jershell.shadcn.theme.ColorProps
@@ -225,7 +225,7 @@ internal fun ColumnScope.SidebarContent(
     } else {
         // expanded: content scrolls on its own with the shadcn scrollbar
         val scrollState = rememberScrollState()
-        val scrollbarState = rememberScrollbarState(scrollState)
+        val scrollbarState = rememberCoalescedScrollbarState(scrollState)
         Row(
             modifier = modifier
                 .weight(1f, fill = true)

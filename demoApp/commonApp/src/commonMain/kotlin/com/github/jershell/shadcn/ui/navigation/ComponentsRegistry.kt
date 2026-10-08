@@ -37,6 +37,7 @@ import com.github.jershell.shadcn.ui.components.demo.DemoProgress
 import com.github.jershell.shadcn.ui.components.demo.DemoQuestionnaire
 import com.github.jershell.shadcn.ui.components.demo.DemoRadio
 import com.github.jershell.shadcn.ui.components.demo.DemoResizable
+import com.github.jershell.shadcn.ui.components.demo.DemoScrollArea
 import com.github.jershell.shadcn.ui.components.demo.DemoSelect
 import com.github.jershell.shadcn.ui.components.demo.DemoSeparator
 import com.github.jershell.shadcn.ui.components.demo.DemoSheet
@@ -136,6 +137,7 @@ import com.github.jershell.shadcn.demoapp.generated.resources.components_registr
 import com.github.jershell.shadcn.demoapp.generated.resources.components_registry_questionnaire
 import com.github.jershell.shadcn.demoapp.generated.resources.components_registry_radio_group
 import com.github.jershell.shadcn.demoapp.generated.resources.components_registry_resizable
+import com.github.jershell.shadcn.demoapp.generated.resources.components_registry_scrollable_content_area_with_sh
 import com.github.jershell.shadcn.demoapp.generated.resources.components_registry_select
 import com.github.jershell.shadcn.demoapp.generated.resources.components_registry_separator
 import com.github.jershell.shadcn.demoapp.generated.resources.components_registry_shadcn_styles_for_hdcharts
@@ -493,6 +495,13 @@ data object ComponentsRegistry {
             description = stringResource(Res.string.components_registry_displays_an_indicator_showing_the_completion_pro),
             demo = {
                 DemoProgress()
+            }
+        ),
+        ComponentId("Scroll Area") to ComponentEntry(
+            name = "Scroll Area",
+            description = stringResource(Res.string.components_registry_scrollable_content_area_with_sh),
+            demo = {
+                DemoScrollArea()
             }
         ),
         ComponentId("Resizable") to ComponentEntry(

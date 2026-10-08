@@ -45,6 +45,7 @@ internal class ToastEntry(
     val durationMillis: Long,
     val action: ToastAction?,
     val onDismiss: (() -> Unit)?,
+    val selectable: Boolean,
 ) {
     var exiting by mutableStateOf(false)
 }
@@ -85,6 +86,7 @@ class ToastManager {
      * @param durationMillis Auto-dismiss delay; `null` uses [defaultDurationMillis], `0` disables.
      * @param action Optional action button rendered inside the toast.
      * @param onDismiss Called when the toast is fully removed (timeout, close, action, clear).
+     * @param selectable When `true`, the title and description text can be selected/copied.
      */
     fun add(
         title: String,
@@ -93,6 +95,7 @@ class ToastManager {
         durationMillis: Long? = null,
         action: ToastAction? = null,
         onDismiss: (() -> Unit)? = null,
+        selectable: Boolean = false,
     ): Long {
         val id = ++idCounter
         entries += ToastEntry(
@@ -103,6 +106,7 @@ class ToastManager {
             durationMillis = durationMillis ?: defaultDurationMillis,
             action = action,
             onDismiss = onDismiss,
+            selectable = selectable,
         )
         enforceLimit()
         return id
@@ -173,6 +177,7 @@ object Toast {
         durationMillis: Long? = null,
         action: ToastAction? = null,
         onDismiss: (() -> Unit)? = null,
+        selectable: Boolean = false,
     ): Long = manager.add(
         title = title,
         description = description,
@@ -180,6 +185,7 @@ object Toast {
         durationMillis = durationMillis,
         action = action,
         onDismiss = onDismiss,
+        selectable = selectable,
     )
 
     /**
@@ -191,6 +197,7 @@ object Toast {
         durationMillis: Long? = null,
         action: ToastAction? = null,
         onDismiss: (() -> Unit)? = null,
+        selectable: Boolean = false,
     ): Long = manager.add(
         title = title,
         description = description,
@@ -198,6 +205,7 @@ object Toast {
         durationMillis = durationMillis,
         action = action,
         onDismiss = onDismiss,
+        selectable = selectable,
     )
 
     /**

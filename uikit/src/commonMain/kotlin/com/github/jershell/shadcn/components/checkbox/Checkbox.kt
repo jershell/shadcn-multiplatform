@@ -34,6 +34,9 @@ import com.github.jershell.shadcn.theme.TypographyStyles
  * @param onCheckedChange Called when the checked state changes.
  * @param enabled Whether the checkbox is interactive.
  * @param label Optional text label rendered next to the checkbox.
+ * @param accessibilityLabel Label announced by screen readers; defaults to [label].
+ *   Use it alone (without [label]) for icon-only checkboxes, e.g. row selection in a
+ *   table (shadcn `aria-label`), where no text must be rendered.
  */
 @Composable
 fun Checkbox(
@@ -42,6 +45,7 @@ fun Checkbox(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     label: String? = null,
+    accessibilityLabel: String? = label,
 ) {
     val colors = resolveCheckboxColors()
     val radius = Theme[DimProps][DimTokens.radiusSm]
@@ -53,7 +57,7 @@ fun Checkbox(
         onCheckedChange = onCheckedChange,
         enabled = enabled,
         modifier = modifier,
-        accessibilityLabel = label,
+        accessibilityLabel = accessibilityLabel,
     ) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(TwDimensions.gapGapToken2),

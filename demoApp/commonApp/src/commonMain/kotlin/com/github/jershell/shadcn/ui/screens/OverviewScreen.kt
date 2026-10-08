@@ -37,7 +37,7 @@ import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.Moon
 import com.composables.icons.lucide.Shuffle
 import com.composables.icons.lucide.Sun
-import com.composeunstyled.rememberScrollbarState
+import com.github.jershell.shadcn.components.scroll.rememberCoalescedScrollbarState
 import com.composeunstyled.theme.Theme
 import com.github.jershell.shadcn.components.button.Button
 import com.github.jershell.shadcn.components.button.ButtonIcon
@@ -158,9 +158,9 @@ fun OverviewScreen() {
                             DashboardScreen(preset)
                         }
                         }
-                        VerticalScrollbar(scrollbarState = rememberScrollbarState(verticalState))
+                        VerticalScrollbar(scrollbarState = rememberCoalescedScrollbarState(verticalState))
                     }
-                    HorizontalScrollbar(scrollbarState = rememberScrollbarState(horizontalState))
+                    HorizontalScrollbar(scrollbarState = rememberCoalescedScrollbarState(horizontalState))
                 }
             }
         }

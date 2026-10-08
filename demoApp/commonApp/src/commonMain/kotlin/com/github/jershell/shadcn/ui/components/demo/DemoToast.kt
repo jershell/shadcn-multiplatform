@@ -56,6 +56,8 @@ import com.github.jershell.shadcn.demoapp.generated.resources.toast_local_toast_
 import com.github.jershell.shadcn.demoapp.generated.resources.toast_new_toasts_appear_in_front_queue_more_than_the_l
 import com.github.jershell.shadcn.demoapp.generated.resources.toast_persistent_notification
 import com.github.jershell.shadcn.demoapp.generated.resources.toast_queue_three
+import com.github.jershell.shadcn.demoapp.generated.resources.toast_selectable_pass_sele_to_make_the_messa
+import com.github.jershell.shadcn.demoapp.generated.resources.toast_selectable_text
 import com.github.jershell.shadcn.demoapp.generated.resources.toast_short_1_5s
 import com.github.jershell.shadcn.demoapp.generated.resources.toast_short_lived_toast
 import com.github.jershell.shadcn.demoapp.generated.resources.toast_something_went_wrong_2
@@ -153,6 +155,21 @@ fun DemoToast() {
                 }) {
                     ButtonText(stringResource(Res.string.toast_sticky))
                 }
+            }
+        }
+
+        DemoSection(
+            title = stringResource(Res.string.toast_selectable_text),
+            description = stringResource(Res.string.toast_selectable_pass_sele_to_make_the_messa),
+        ) {
+            Button(onClick = {
+                Toast(
+                    s_toast_event_has_been_created,
+                    description = "Monday, 10:00 AM - Conference Room B (copy me)",
+                    selectable = true,
+                )
+            }) {
+                ButtonText(stringResource(Res.string.toast_default))
             }
         }
 
@@ -262,6 +279,7 @@ fun DemoToast() {
                     action = ToastAction(label = "Undo", onClick = { Toast("Restored") }),
                 )
                 Toast("Persistent notification", durationMillis = 0)
+                Toast("Created", description = "Copy me", selectable = true)
                 Toast.close(id)
                 Toast.clear()
 

@@ -277,7 +277,7 @@ public fun ShadcnTheme(
                 // theme font: implicit Text (no explicit style) inherits LocalTextStyle
                 defaultTextStyle = TextStyle(fontFamily = LocalShadcnFonts.current ?: FontFamily.Default)
                 defaultTextSelectionColors = TextSelectionColors(
-                    backgroundColor = palette.getValue(ColorTokens.primary),
+                    backgroundColor = palette.getValue(ColorTokens.primary).copy(alpha = 0.3f),
                     handleColor = palette.getValue(ColorTokens.primaryForeground).copy(alpha = 0.3f),
                 )
                 properties[ColorProps] = palette
